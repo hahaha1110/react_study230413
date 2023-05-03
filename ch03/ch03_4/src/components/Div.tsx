@@ -6,6 +6,7 @@ import type {
 } from 'react'
 import type { WidthHeight } from './WidthHeight'
 import type { LeftRightTopBottom } from './LeftRightTopBottom'
+import type { MinMaxWidthHeight } from './MinMaxWidthHeight'
 
 export type ReactDivProps = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
@@ -13,7 +14,8 @@ export type ReactDivProps = DetailedHTMLProps<
 >
 export type DivProps = ReactDivProps &
   PropsWithChildren<WidthHeight> &
-  LeftRightTopBottom & {
+  LeftRightTopBottom &
+  MinMaxWidthHeight & {
     src?: string
   }
 
@@ -27,6 +29,10 @@ export const Div: FC<DivProps> = ({
   right,
   top,
   bottom,
+  minWidth,
+  maxWidth,
+  minHeight,
+  maxHeight,
   ...props
 }) => {
   const style = {
@@ -37,7 +43,11 @@ export const Div: FC<DivProps> = ({
     left,
     right,
     top,
-    bottom
+    bottom,
+    minWidth,
+    maxWidth,
+    minHeight,
+    maxHeight
   }
   const className = ['box-sizing', src && 'bg-gray-300', _className].join(' ')
   return <div {...props} className={className} style={style} />
