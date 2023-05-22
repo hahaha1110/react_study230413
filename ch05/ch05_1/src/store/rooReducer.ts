@@ -1,4 +1,4 @@
-import type { Action } from 'redux'
+import { Actions } from './actions'
 import { AppState } from './AppState'
 
 const initialAppState = {
@@ -6,5 +6,12 @@ const initialAppState = {
 }
 export const rootReducer = (
   state: AppState = initialAppState,
-  action: Action
-) => state
+  action: Actions
+) => {
+  switch (action.type) {
+    case 'setToday': {
+      return { ...state, today: action.today }
+    }
+  }
+  return state
+}
