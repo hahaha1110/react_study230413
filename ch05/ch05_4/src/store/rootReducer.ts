@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import {combineReducers} from 'redux'
 import * as L from './listEntities'
 import * as LO from './listidOrders'
 import * as LC from './listidCardidOrders'

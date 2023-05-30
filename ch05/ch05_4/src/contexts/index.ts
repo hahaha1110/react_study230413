@@ -1,1 +1,1 @@
-export * from './ResponsibeContext'
+export * from './ResponsiveContext'

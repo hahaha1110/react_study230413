@@ -1,5 +1,5 @@
-import type { Action } from 'redux'
-import type { Card, UUID } from '../commonTypes'
+import type {Action} from 'redux'
+import type {Card, UUID} from '../commonTypes'
 export * from '../commonTypes'
 
 export type State = Record<UUID, Card>

@@ -8,9 +8,7 @@ export const addListidToOrders = (payload: T.UUID): T.AddListidToOrders => ({
   type: '@listidOrders/add',
   payload
 })
-export const removeListidFromOrders = (
-  payload: T.UUID
-): T.RemoveListidFromOrders => ({
+export const removeListidFromOrders = (payload: T.UUID): T.RemoveListidFromOrders => ({
   type: '@listidOrders/remove',
   payload
 })

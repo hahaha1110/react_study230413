@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { useEventListener } from './useEventListener'
+import {useState, useEffect} from 'react'
+import {useEventListener} from './useEventListener'
 
 export const useWindowResize = () => {
   const [widthHeight, setWidthHeight] = useState<number[]>([0, 0])

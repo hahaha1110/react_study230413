@@ -1,8 +1,6 @@
 import type * as T from './types'
 
-export const setListidCardids = (
-  payload: T.ListidCardidS
-): T.SetListidCardids => ({
+export const setListidCardids = (payload: T.ListidCardidS): T.SetListidCardids => ({
   type: '@listidCardids/set',
   payload
 })

@@ -1,5 +1,5 @@
-import type { FC, DetailedHTMLProps, HTMLAttributes } from 'react'
-import { makeClassName } from './textUtil'
+import type {FC, DetailedHTMLProps, HTMLAttributes} from 'react'
+import {makeClassName} from './textUtil'
 
 type TextProps = DetailedHTMLProps<
   HTMLAttributes<HTMLParagraphElement>,

@@ -1,12 +1,12 @@
-import type { FC, ChangeEvent } from 'react'
-import { useState, useCallback } from 'react'
-import { Icon } from '../../theme/daisyui'
+import type {FC, ChangeEvent} from 'react'
+import {useState, useCallback} from 'react'
+import {Icon} from '../../theme/daisyui'
 import * as D from '../../data'
 
 export type CreateListFormProps = {
   onCreateList: (uuid: string, title: string) => void
 }
-const CreateListForm: FC<CreateListFormProps> = ({ onCreateList }) => {
+const CreateListForm: FC<CreateListFormProps> = ({onCreateList}) => {
   const [value, setValue] = useState<string>(D.randomTitleText())
 
   const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {

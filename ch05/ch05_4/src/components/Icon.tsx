@@ -1,9 +1,6 @@
-import type { FC, DetailedHTMLProps, HTMLAttributes } from 'react'
+import type {FC, DetailedHTMLProps, HTMLAttributes} from 'react'
 
-type ReactSpanProps = DetailedHTMLProps<
-  HTMLAttributes<HTMLSpanElement>,
-  HTMLSpanElement
->
+type ReactSpanProps = DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>
 
 export type IconProps = ReactSpanProps & {
   name: string

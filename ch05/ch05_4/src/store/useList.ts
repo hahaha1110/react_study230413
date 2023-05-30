@@ -14,6 +14,7 @@ export const useLists = () => {
     ({ listidOrders, listEntities }) =>
       listidOrders.map(uuid => listEntities[uuid])
   )
+
   const listidCardidOrders = useSelector<AppState, LC.State>(
     ({ listidCardidOrders }) => listidCardidOrders
   )
@@ -43,6 +44,18 @@ export const useLists = () => {
     },
     [dispatch, listidCardidOrders]
   )
-
-  return { lists, onCreateList, onRemoveList }
+  const onMoveList = useCallback(
+    (dragIndex: number, hoverIndex: number) => {
+      const newOrders = listidOrders.map((item, index) =>
+        index === dragIndex
+          ? listidOrders[hoverIndex]
+          : index === hoverIndex
+          ? listidOrders[dragIndex]
+          : item
+      )
+      dispatch(LO.setListidOrders(newOrders))
+    },
+    [dispatch, listidOrders]
+  )
+  return { lists, onCreateList, onRemoveList, onMoveList }
 }

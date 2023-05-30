@@ -1,5 +1,5 @@
-import type { IUser } from './User'
-import { makeRandomUser } from './User'
+import type {IUser} from './User'
+import {makeRandomUser} from './User'
 import * as C from './chance'
 import * as I from './image'
 import * as D from './date'
@@ -22,15 +22,7 @@ export const makeCard = (
   paragraphs: string,
   dayMonthYearDate: string,
   relativeDate: string | null
-): ICard => ({
-  uuid,
-  writer,
-  image,
-  title,
-  paragraphs,
-  dayMonthYearDate,
-  relativeDate
-})
+): ICard => ({uuid, writer, image, title, paragraphs, dayMonthYearDate, relativeDate})
 
 export const makeRandomCard = () => {
   const date = D.makeRandomPastDate()

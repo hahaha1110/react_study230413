@@ -1,6 +1,6 @@
-import type { Action } from 'redux'
-import type { AppState } from './AppState'
+import type {Action} from 'redux'
+import type {AppState} from './AppState'
 export const rootReducer = (state: AppState, action: Action) => state
 
-// import { combineReducers } from 'redux'
-// export const rootReducer = combineReducers({})
+//import { combineReducers } from 'redux'
+//export const rootReducer = combineReducers({})

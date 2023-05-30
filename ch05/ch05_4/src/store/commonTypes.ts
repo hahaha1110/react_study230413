@@ -1,4 +1,4 @@
-import type { ICard } from '../data'
+import type {ICard} from '../data'
 
 export type UUID = string
 export type List = {
@@ -11,7 +11,7 @@ export type CardidListid = {
   listid: UUID
 }
 export type ListidCardid = CardidListid
-export type ListidCardidS = { listid: UUID; cardids: UUID[] }
+export type ListidCardidS = {listid: UUID; cardids: UUID[]}
 export type CardidListidIndex = CardidListid & {
   index: number
 }

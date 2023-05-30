@@ -1,5 +1,5 @@
-import type { Action } from 'redux'
-import type { List } from '../commonTypes'
+import type {Action} from 'redux'
+import type {List} from '../commonTypes'
 export * from '../commonTypes'
 
 export type State = Record<string, List>

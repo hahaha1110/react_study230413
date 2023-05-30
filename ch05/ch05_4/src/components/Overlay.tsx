@@ -1,6 +1,6 @@
-import type { FC } from 'react'
-import type { ReactDivProps } from './Div'
-import { Div } from './Div'
+import type {FC} from 'react'
+import type {ReactDivProps} from './Div'
+import {Div} from './Div'
 
 export type OverlayProps = ReactDivProps & {
   opacityClass?: string

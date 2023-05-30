@@ -1,21 +1,16 @@
-import type { FC } from 'react'
-import type { ReactDivProps } from '../../components'
-import { Div } from '../../components'
-import { Icon } from './Icon'
+import type {FC} from 'react'
+import type {ReactDivProps} from '../../components'
+import {Div} from '../../components'
+import {Icon} from './Icon'
 
 export type ModalProps = ReactDivProps & {
   open?: boolean
 }
-export const Modal: FC<ModalProps> = ({
-  open,
-  className: _className,
-  ...props
-}) => {
+export const Modal: FC<ModalProps> = ({open, className: _className, ...props}) => {
   const className = ['modal', open ? 'modal-open' : '', _className].join(' ')
   return <div {...props} className={className} />
 }
 
-// modal-box 보다 modalcontent가 더 이름으로 잘어울려서 이렇게
 export type ModalContentProps = ReactDivProps & {
   onCloseIconClicked?: () => void
   closeIconClassName?: string
@@ -28,22 +23,14 @@ export const ModalContent: FC<ModalContentProps> = ({
   ...props
 }) => {
   const showCloseIcon = onCloseIconClicked ? true : false
-  const className = ['modal-box', showCloseIcon && 'relative', _className].join(
-    ' '
-  )
-  if (!showCloseIcon)
-    return <div {...props} className={className} children={children} />
+  const className = ['modal-box', showCloseIcon && 'relative', _className].join(' ')
+  if (!showCloseIcon) return <div {...props} className={className} children={children} />
 
-  const closeIconClassName =
-    _closeIconClassName ?? 'btn-primary btn-outline btn-sm'
+  const closeIconClassName = _closeIconClassName ?? 'btn-primary btn-outline btn-sm'
   return (
     <div {...props} className={className}>
       <Div className="absolute" right="0.5rem" top="0.5rem">
-        <Icon
-          name="close"
-          className={closeIconClassName}
-          onClick={onCloseIconClicked}
-        />
+        <Icon name="close" className={closeIconClassName} onClick={onCloseIconClicked} />
       </Div>
       {children}
     </div>
@@ -51,10 +38,7 @@ export const ModalContent: FC<ModalContentProps> = ({
 }
 
 export type ModalActionProps = ReactDivProps & {}
-export const ModalAction: FC<ModalActionProps> = ({
-  className: _className,
-  ...props
-}) => {
+export const ModalAction: FC<ModalActionProps> = ({className: _className, ...props}) => {
   const className = ['modal-action', _className].join(' ')
   return <div {...props} className={className} />
 }
