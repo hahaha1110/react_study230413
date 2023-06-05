@@ -5,11 +5,11 @@ export const setListidOrders = (payload: T.State): T.SetListidOrders => ({
   payload
 })
 
-export const AddListidToOrders = (payload: T.UUID): T.AddListidToOrders => ({
+export const addListidToOrders = (payload: T.UUID): T.AddListidToOrders => ({
   type: '@listidOrders/add',
   payload
 })
-export const RemoveListidFromOrders = (
+export const removeListidFromOrders = (
   payload: T.UUID
 ): T.RemoveListidFromOrders => ({
   type: '@listidOrders/remove',
