@@ -1,13 +1,14 @@
-import { useCallback, useMemo } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useCallback } from 'react'
 import { Title } from '../../components'
 import CreateListForm from './CreateListForm'
 import BoardList from '../BoardList'
-import type { AppState } from '../../store'
-import type { List } from '../../store/commonTypes'
 import * as LO from '../../store/listidOrders'
 import * as L from '../../store/listEntities'
-
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { AppState } from '../../store'
+import { List } from '../../store/commonTypes'
+import { useMemo } from 'react'
 export default function Board() {
   const dispatch = useDispatch()
 
@@ -24,7 +25,6 @@ export default function Board() {
     },
     [dispatch]
   )
-
   const onRemoveList = useCallback(
     (listid: string) => () => {
       dispatch(L.removeList(listid))
@@ -32,7 +32,6 @@ export default function Board() {
     },
     [dispatch]
   )
-
   const children = useMemo(
     () =>
       lists.map(list => (
@@ -44,7 +43,6 @@ export default function Board() {
       )),
     [lists, onRemoveList]
   )
-
   return (
     <section className="mt-4">
       <Title>Board</Title>
