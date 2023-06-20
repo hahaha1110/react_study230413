@@ -24,11 +24,11 @@ let profile: profileType = {
   location_: "seoul",
 };
 
-function func({ name_: n, age_: a, location_: l }: profileType) {
+function func_({ name_: n, age_: a, location_: l }: profileType) {
   console.log(n, a, l);
 }
 
-func(profile);
+func_(profile);
 
 const { name_, age_, location_ } = profile;
 
