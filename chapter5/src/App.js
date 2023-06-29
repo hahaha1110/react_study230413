@@ -7,6 +7,7 @@ import ChildComp from "./component/ChildComp";
 import StyledBody from "./component/StyledBody";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
+import StateBody from "./component/StateBody";
 
 function App() {
   const BodyProps = {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <StateBody />
       <Body {...BodyProps} />
       <Body2 />
       <Body3 />
