@@ -7,8 +7,12 @@ const BodyIseRef = () => {
     setText(e.target.value);
   };
   const handleOnclick = () => {
-    alert(text);
-    textRef.current.value = "지웠지롱!";
+    if (text.length <= 5) {
+      textRef.current.focus();
+    } else {
+      alert(text);
+      textRef.current.value = "지웠지롱!";
+    }
   };
   return (
     <div>
