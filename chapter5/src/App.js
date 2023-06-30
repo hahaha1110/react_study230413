@@ -8,6 +8,7 @@ import StyledBody from "./component/StyledBody";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
 import StateBody from "./component/StateBody";
+import BodyState from "./component/BodyState";
 
 function App() {
   const BodyProps = {
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <BodyState />
       <StateBody />
       <Body {...BodyProps} />
       <Body2 />
