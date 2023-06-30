@@ -9,6 +9,9 @@ import Footer from "./component/Footer";
 import Header from "./component/Header";
 import StateBody from "./component/StateBody";
 import BodyState from "./component/BodyState";
+import BodyState2 from "./component/BodyState2";
+import ChildState from "./component/ChildState";
+import BodyIseRef from "./component/BodyIseRef";
 
 function App() {
   const BodyProps = {
@@ -20,6 +23,10 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <BodyIseRef />
+      <BodyState2>
+        <ChildState />
+      </BodyState2>
       <BodyState />
       <StateBody />
       <Body {...BodyProps} />
