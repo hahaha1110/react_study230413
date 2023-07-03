@@ -2,6 +2,7 @@ import "./App.css";
 import Viewer from "./components/Viewer";
 import Controller from "./components/Controller";
 import { useEffect, useRef, useState } from "react";
+import EvenCount from "./components/EvenCount";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,6 +44,7 @@ function App() {
       <h1>Simple Counter</h1>
       <section>
         <Viewer count={count} />
+        {count % 2 == 0 && <EvenCount />}
       </section>
       <section>
         <input value={text} onChange={textHandler} />
